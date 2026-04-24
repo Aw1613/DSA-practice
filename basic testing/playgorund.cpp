@@ -136,37 +136,198 @@ int main(){
 //     x--;
 // }
 
+// int n = 5;
+// for (int i = 0; i  < n; i++)
+// {
+//     for (int r = 0; r <= i; r++)
+//     {
+//         if (i%2 == 0)
+//         {
+//             if (r == 0){
+//                 cout<<"1";
+//             }
+//             else if (r%2 != 0){
+//                 cout<<"0";
+//             }
+//             else if (r%2 == 0){
+//                 cout<<"1";
+//             }
+//         }
+//         else if (i%2 != 0)
+//         {
+//             if (r == 0){
+//                 cout<<"0";
+//             }
+//             else if (r%2 != 0){
+//                 cout<<"1";
+//             }
+//             else if (r%2 == 0){
+//                 cout<<"0";
+//             }
+//         }
+//     }
+//     cout<<endl;
+// }
+
+
+
+// int n = 5;
+// int sp = (n-1)*2;
+// for (int i = 1; i <= n; i++)
+// {
+//     for (int ca = 1; ca <= i; ca++)
+//     {
+//         cout<<ca;
+//     }
+//     for (int s = 0; s < sp; s++)
+//     {
+//         cout<<" ";
+//     }
+//     for (int cb = i; cb > 0; cb--)
+//     {
+//         cout<<cb;
+//     }
+//     sp = sp-2;
+//     cout<<endl;
+    
+// }
+
+
+
+// int n =5;
+// int c = 1;
+// for (int i = 0; i < n; i++)
+// {
+//     for (int r = 0; r <= i; r++)
+//     {
+//         cout<<c<<" ";
+//         c++;
+//     }
+//     cout<<endl;
+    
+// }
+
+
+
+
+
+// int n = 5;
+// char a = 65;
+// for (int i = 0; i < n; i++)
+// {
+//     for (int r = 0; r <= i; r++)
+//     {
+//         cout<<a<<" ";
+//         a++;
+//     }
+//     a = 65;
+//     cout<<endl;
+    
+// }
+
+// int n = 5;
+// char a = 65;
+// for (int i = n; i >= 0; i--)
+// {
+//     for (int r = i; r > 0; r--)
+//     {
+//         cout<<a<<" ";
+//         a++;
+//     }
+//     a = 65;
+//     cout<<endl;
+    
+// }
+
+
+
+// int n = 5;
+// char a = 65;
+// for(int i = 0; i<n;i++){
+//     for(int r = 0; r<=i; r++){
+//         cout<<a;
+//     }
+//     a++;
+//     cout<<endl;
+// }
+
+
+// int n = 7;
+// int b = n-1;
+// int l =0;
+// char a = 65;
+// for(int i = 0; i < n;i++){
+//     for (int s = 0; s < b; s++)
+//     {
+//         cout<<" ";
+//     }
+//     l = 0;
+//     while (l <= 2*i)
+//     {
+//         if (l <= i)
+//         {
+//             cout<<a;
+//             a++;
+//             if (l==i)
+//             {
+//                 a--;
+//             }
+//             l++;
+//         }
+//         // a--;
+//         else {
+//             a--;
+//             cout<<a;
+//             l++;
+//         }
+        
+//     }
+//     for (int s = 0; s < b; s++)
+//     {
+//         cout<<" ";
+//     }
+//     a = 65;
+//     b--;
+//     cout<<endl;
+    
+    
+// }
+
+//revised code 
+
 int n = 5;
-for (int i = 0; i  < n; i++)
+char a = 65;
+for (int i = 0; i < n; i++)
 {
-    for (int r = 0; r <= i; r++)
+    // space printing 
+    for (int s = 0; s < n - i - 1; s++)
     {
-        if (i%2 == 0)
+        cout<<" ";
+    }
+
+    for (int j = 0; j <= 2*i; j++)
+    {
+        int breakpoint = (2 * i + 1)/2;
+        if (j < breakpoint)
         {
-            if (r == 0){
-                cout<<"1";
-            }
-            else if (r%2 != 0){
-                cout<<"0";
-            }
-            else if (r%2 == 0){
-                cout<<"1";
-            }
+            cout<<a;
+            a++;
         }
-        else if (i%2 != 0)
-        {
-            if (r == 0){
-                cout<<"0";
-            }
-            else if (r%2 != 0){
-                cout<<"1";
-            }
-            else if (r%2 == 0){
-                cout<<"0";
-            }
+        else if(j >= breakpoint) {
+            cout<<a;
+            a--;
         }
     }
+    
+    for (int s = 0; s < n - i - 1; s++)
+    {
+        cout<<" ";
+    }
+    a = 65;
+
     cout<<endl;
+    
+    
 }
 
 
