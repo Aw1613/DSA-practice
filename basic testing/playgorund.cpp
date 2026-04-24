@@ -295,40 +295,57 @@ int main(){
 
 //revised code 
 
+// int n = 5;
+// char a = 65;
+// for (int i = 0; i < n; i++)
+// {
+//     // space printing 
+//     for (int s = 0; s < n - i - 1; s++)
+//     {
+//         cout<<" ";
+//     }
+
+//     for (int j = 0; j <= 2*i; j++)
+//     {
+//         int breakpoint = (2 * i + 1)/2;
+//         if (j < breakpoint)
+//         {
+//             cout<<a;
+//             a++;
+//         }
+//         else if(j >= breakpoint) {
+//             cout<<a;
+//             a--;
+//         }
+//     }
+    
+//     for (int s = 0; s < n - i - 1; s++)
+//     {
+//         cout<<" ";
+//     }
+//     a = 65;
+
+//     cout<<endl;
+    
+    
+// }
+
+
+
+
 int n = 5;
-char a = 65;
+char c = 'A' + char(n-1) ;
 for (int i = 0; i < n; i++)
 {
-    // space printing 
-    for (int s = 0; s < n - i - 1; s++)
+    for (int s = 0; s <= i; s++)
     {
-        cout<<" ";
+        c = c + s - i;
+        cout<<c;
+        c = 'A' + char(n-1);
     }
-
-    for (int j = 0; j <= 2*i; j++)
-    {
-        int breakpoint = (2 * i + 1)/2;
-        if (j < breakpoint)
-        {
-            cout<<a;
-            a++;
-        }
-        else if(j >= breakpoint) {
-            cout<<a;
-            a--;
-        }
-    }
-    
-    for (int s = 0; s < n - i - 1; s++)
-    {
-        cout<<" ";
-    }
-    a = 65;
-
     cout<<endl;
-    
-    
 }
+
 
 
     return 0;
