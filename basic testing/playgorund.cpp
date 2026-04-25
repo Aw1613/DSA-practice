@@ -333,18 +333,127 @@ int main(){
 
 
 
+// int n = 5;
+// char c = 'A' + char(n-1) ;
+// for (int i = 0; i < n; i++)
+// {
+//     for (int s = 0; s <= i; s++)
+//     {
+//         c = c + s - i;
+//         cout<<c;
+//         c = 'A' + char(n-1);
+//     }
+//     cout<<endl;
+// }
+
+
+
+// int n = 5;
+// for (int i = 0; i <2*n; i++)
+// {
+//     if (i<n)
+//     {
+//         for (int s = 0; s < n-i; s++)
+//         {
+//             cout<<"*";
+//         }
+//         for (int b = 0; b < 2*i; b++)
+//         {
+//             cout<<" ";
+//         }
+//         for (int s = 0; s < n-i; s++)
+//         {
+//             cout<<"*";
+//         } 
+//     }
+//     else if (i >=n && i <2*n)   
+//     {
+//         for (int s = 0; s < i-n+1; s++)
+//         {
+//             cout<<"*";
+//         }
+//         for (int b = 2*n; b > i-n; b--)
+//         {
+//             cout<<" ";
+//             cout<<b;
+//         }
+//         for (int s = 0; s < i-n+1; s++)
+//         {
+//             cout<<"*";
+//         }
+//     }
+//     cout<<endl;
+    
+// }
+
+// above's working code 
+
+
+// int n = 5;
+// for (int i = 0; i < n; i++)
+// {
+//     // stars
+//     for (int s = 0; s < n-i; s++)
+//     {
+//         cout<<"*";
+//     }
+//     // spaces
+//     for (int j = 0; j < 2*i; j++)
+//     {
+//         cout<<" ";
+//     }
+//     // stars
+//     for (int s = 0; s < n-i; s++)
+//     {
+//         cout<<"*";
+//     }
+//     cout<<endl;
+// }
+
+// // second lower loop
+// for (int i = n; i > 0; i--)
+// {
+//     for (int s = 0; s < n-i+1; s++)
+//     {
+//         cout<<"*";
+//     }
+//     for (int j = 2*i-2; j > 0; j--)
+//     {
+//         cout<<" ";
+//     }
+//     for (int s = 0; s < n-i+1; s++)
+//     {
+//         cout<<"*";
+//     }
+//     cout<<endl;
+// }
+
+
+
+
 int n = 5;
-char c = 'A' + char(n-1) ;
-for (int i = 0; i < n; i++)
+int iniS ;
+for (int i = 0; i < 5; i++)
 {
-    for (int s = 0; s <= i; s++)
+    // stars
+    for (int s = 0; s < i+1; s++)
     {
-        c = c + s - i;
-        cout<<c;
-        c = 'A' + char(n-1);
+        cout<<"*";
+    }
+    // space
+    iniS = 2*n-2;
+    while (iniS >= 0){
+        cout<<" ";
+        iniS = iniS - 2;
+    }
+    // stars
+    for (int s = 0; s < i+1; s++)
+    {
+        cout<<"*";
     }
     cout<<endl;
 }
+
 
 
 
