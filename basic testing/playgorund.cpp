@@ -431,29 +431,105 @@ int main(){
 
 
 
+// int n = 25;
+// int iniS = 2*n-2;
+// for (int i = 0; i < n; i++)
+// {
+//     iniS = iniS - 2*i;
+//     for (int s = 0; s < i+1; s++)
+//     {
+//         cout<<"*";
+//     }
+//     while(iniS >0) {
+//         cout<<" ";
+//         iniS--;
+//     }
+//     for (int s = 0; s < i+1; s++)
+//     {
+//         cout<<"*";
+//     }
+//     cout<<endl;
+//     iniS = 2*n-2;
+    
+// }
+
+// // lower half
+// iniS = 2;
+// for (int i = n; i > 0; i--)
+// {
+//     for (int j = i-1; j > 0; j--)
+//     {
+//         cout<<"*";
+//     }
+//     for (int j = 0; j < iniS; j++)
+//     {
+//         cout<<" ";
+//     }
+//     for (int j = i-1; j > 0; j--)
+//     {
+//         cout<<"*";
+//     }
+//     iniS = iniS + 2;
+//     cout<<endl;
+// }
+
+
+
+// better version of above 
+
+
+// int n = 5;
+// int spaces = 2*n -2;
+// for (int i = 1; i <= 2*n-1; i++)
+// {
+//     int stars = i;
+//     if (i > n) stars = 2*n-i;
+
+//     for (int j =1; j<= stars;j++){
+//         cout<<"*";
+//     }
+//     for (int s = 1; s<= spaces ; s++){
+//         cout<<" ";
+//     }
+//     for (int j =1; j<= stars;j++){
+//         cout<<"*";
+//     }
+//     cout<<endl;
+//     if(i<n) spaces -= 2;
+//     else spaces += 2;
+    
+// }
+
+
+
+
+// int n = 6;
+// for (int i = 1; i<= n; i++){
+//     if (i == 1 || i == n)
+//     {
+//         for (int stars = 1; stars<=n; stars++) cout<<"*";
+//     }
+//     else {
+//         cout<<"*";
+//         for(int spaces = 1; spaces <= n-2; spaces++) cout<<" ";
+//         cout<<"*";
+//     }
+//     cout<<endl;
+    
+// }
+
+
+// better version of above
 int n = 5;
-int iniS ;
-for (int i = 0; i < 5; i++)
-{
-    // stars
-    for (int s = 0; s < i+1; s++)
-    {
-        cout<<"*";
-    }
-    // space
-    iniS = 2*n-2;
-    while (iniS >= 0){
-        cout<<" ";
-        iniS = iniS - 2;
-    }
-    // stars
-    for (int s = 0; s < i+1; s++)
-    {
-        cout<<"*";
+for (int i =0; i <n ; i++){
+    for(int j = 0; j<n;j++){
+        if (i==0 || j==0 || i==n-1 || j==n-1){
+            cout<<"*";
+        }
+        else cout<<" ";
     }
     cout<<endl;
 }
-
 
 
 
