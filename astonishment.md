@@ -6,3 +6,4 @@ string s = to_string(num);
 int digit = s[i] - '0';
 // as the ascii value perfectly matches we could do this 
 ~~~
+prob :- https://codeforces.com/contest/514/problem/A
