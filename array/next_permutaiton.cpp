@@ -22,13 +22,14 @@
 // };
 
 // attempt 2 RTE
+// Rechecked , correct sol l -> i
 
 // class Solution {
 // public:
 //     void nextPermutation(vector<int>& nums) {
 //         int l = nums.size();
 //         bool yes = 0;
-//         for(int i = l-2; l >= 0; i--){
+//         for(int i = l-2; i >= 0; i--){
 //             if(nums[i] < nums[i+1]){
 //                 yes = 1;
 //                 for(int k = l-1; k > i; k--){
@@ -37,7 +38,7 @@
 //                         break;
 //                     }
 //                 }
-//                 sort(nums.begin() + i + 1, nums.end());
+//                 reverse(nums.begin() + i + 1, nums.end());
 //                 return ;
 //             }
 //         }
