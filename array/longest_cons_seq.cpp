@@ -20,21 +20,48 @@ public:
         // return cnt;
 
         
-        int cnt = 1;
-        int maxi = 1;
-        sort(nums.begin(),nums.end());
-        for(int i = 0; i < nums.size()-1; i++){
-            if(nums[i]+1 == nums[i+1]){
-                cnt++;
-                maxi = max(maxi,cnt);
-            }
-            else if(nums[i+1] == nums[i]){
+//         int cnt = 1;
+//         int maxi = 1;
+//         sort(nums.begin(),nums.end());
+//         for(int i = 0; i < nums.size()-1; i++){
+//             if(nums[i]+1 == nums[i+1]){
+//                 cnt++;
+//                 maxi = max(maxi,cnt);
+//             }
+//             else if(nums[i+1] == nums[i]){
 
+//             }
+//             else{
+//                 cnt = 1;
+//             }
+//         }
+//         return maxi;
+//     }
+// };
+
+// attempt 3 for better sol 
+class Solution {
+public:
+    int longestConsecutive(vector<int>& nums) {
+        sort(nums.begin(),nums.end());
+        int cnt = 1;
+        int maxi = 0;
+        if(nums.size() == 0){
+            return 0;
+        }
+        for(int i =1; i < nums.size(); i++){
+            if(nums[i-1] == nums[i]){
+                continue;
             }
-            else{
+            else if(nums[i] == nums[i-1] + 1){
+                cnt++;
+            }
+            else if(nums[i] != nums[i-1] + 1){
+                maxi = max(cnt,maxi);
                 cnt = 1;
             }
         }
+        maxi = max(cnt,maxi);
         return maxi;
     }
 };
