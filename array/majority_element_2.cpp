@@ -33,20 +33,42 @@
 
 // bettwer solution using hash maps and iterating it through in one go thrtough hash map
 
+// class Solution {
+// public:
+//     vector<int> majorityElement(vector<int>& nums) {
+//         map<int,int> mpp;
+//         int mini = floor((nums.size())/3);
+//         vector<int> sol;
+
+//         for(int i = 0; i < nums.size(); i++){
+//             mpp[nums[i]]++;
+//             if(mpp[nums[i]] == mini + 1){
+//                 sol.push_back(nums[i]);
+//             }
+//             if(sol.size() == 2) break;
+//         }  
+//         return sol;
+//     }
+// };
+
+
+// ATP 2
+// edge case couldn't handel properly 
 class Solution {
 public:
     vector<int> majorityElement(vector<int>& nums) {
-        map<int,int> mpp;
-        int mini = floor((nums.size())/3);
+        unordered_map<int,int> mpp;
         vector<int> sol;
-
-        for(int i = 0; i < nums.size(); i++){
-            mpp[nums[i]]++;
-            if(mpp[nums[i]] == mini + 1){
+        int t = floor((nums.size())/3);
+        for(int i = 0; i < nums.size() ; i++){
+            // if(i == 0) mpp[nums[i]]++;
+            if(mpp[nums[i]] <= t){
+                mpp[nums[i]]++;
+            }
+            else if(mpp[nums[i]] > t){
                 sol.push_back(nums[i]);
             }
-            if(sol.size() == 2) break;
-        }  
+        }
         return sol;
     }
 };
